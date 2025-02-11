@@ -151,7 +151,7 @@ public class AbpHttpClientProxyServiceConvention : AbpServiceConvention
             if (actionApiDescriptionModel == null)
             {
                 Logger.LogWarning($"Could not find ApiDescriptionModel for action: {action.ActionName} in controller: {controller.ControllerName}, May be the generate-proxy.json is not up to date.");
-                return;;
+                return;
             }
 
             ControllerWithAttributeRoute.Add(controller);

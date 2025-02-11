@@ -9,7 +9,7 @@ public class ServerDbContextFactory : IDesignTimeDbContextFactory<ServerDbContex
     {
         var configuration = BuildConfiguration();
         var builder = new DbContextOptionsBuilder<ServerDbContext>()
-            .UseSqlServer(configuration.GetConnectionString("Default"));
+            .UseMySql(configuration.GetConnectionString("Default"),new MySqlServerVersion(new System.Version(5, 7, 0)));
 
         return new ServerDbContext(builder.Options);
     }
